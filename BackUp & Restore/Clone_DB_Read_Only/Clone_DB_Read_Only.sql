@@ -1,0 +1,2 @@
+--use test1
+--dbcc clonedatabase ('Test1','Test2')

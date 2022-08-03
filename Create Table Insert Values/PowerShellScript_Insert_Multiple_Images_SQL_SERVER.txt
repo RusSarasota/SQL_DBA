@@ -1,0 +1,11 @@
+
+$files=dir -name #storing all file names in the variable files
+
+$counter=1 #counter to insert the id into the table starting in the number 1
+
+foreach ($file in $files)
+ {
+ invoke-sqlcmd "INSERT INTO LearningTips.dbo.Images2 values ($counter,
+ (select * from openrowset (bulk N'C:\Users\rus_d\OneDrive\DesktopBackup\Learn to Code_1\GitHub\ImagesLearningTips\More\$file', single_blob) as T1))"
+ $counter++
+ }

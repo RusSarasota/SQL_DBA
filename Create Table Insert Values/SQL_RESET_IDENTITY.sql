@@ -1,0 +1,1 @@
+dbcc checkident ('Authors',reseed, 0);

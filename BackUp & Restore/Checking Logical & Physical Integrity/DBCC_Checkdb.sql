@@ -1,0 +1,2 @@
+dbcc checkdb ('SchoolDB')
+go
